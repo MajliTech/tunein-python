@@ -16,7 +16,7 @@ keys:
 
     returns a dict with all of the data mentioned above
     keys:
-        - streams: a list of dicts looking like {"reliability": int, "stream_url": str, "media_type": str, "bitrate": int} ({"reliability": 99, "stream_url": "http://www.rmfon.pl/tunein/tunein.p[...]", "media_type": "mp3", "bitrate": 128})
+        - streams: a list of dicts looking like `{"reliability": int, "stream_url": str, "media_type": str, "bitrate": int}` (`{"reliability": 99, "stream_url": "http://www.rmfon.pl/tunein/tunein.p[...]", "media_type": "mp3", "bitrate": 128}`)
         - name: a str with the station name (RMF FM)
         - subtitle: in API called a slogan, a str with the station's subtitle (Najlepsza Muzyka / The Best Music)
         - frequency: if applicable, a float containing most likely FM frequency of the station. May be None (96.0)
