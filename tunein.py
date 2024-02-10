@@ -1,14 +1,3 @@
-# Copyright (C) 2024 MajliTech
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-# You should have received a copy of the GNU General Public License
-# along with this program.  If not, see <https://www.gnu.org/licenses/
 import requests
 class Errors:
     class TuneInError(BaseException):
@@ -83,8 +72,15 @@ def get_station_metadata(id:str = None) -> dict or None:
 def search_for_stations(query = None) -> list or None:
     """
     Gets stations under the query provided.
+    query: str - keywords for the station
+
+    Returns a list with a dict for each radio station
+    keys: 
+        - name: the name of the station
+        - id  : the id you can use later in the library. scraped from GuideId of station
+        - logo: an URL to station's image.
     """
-    # https://api.tunein.com/profiles?fullTextSearch=true&query={query}&formats=mp3,aac,ogg,flash,html,hls,wma&partnerId=RadioTime&version=6.1501
+    if query == None: return None
     stations_req = requests.get(f"https://api.tunein.com/profiles?fullTextSearch=true&query={query}&formats=mp3,aac,ogg,flash,html,hls,wma&partnerId=RadioTime&version=6.1501")
     if not stations_req.ok:
         raise Errors.TuneInError(f"An HTTP error code has been returned: {stations_req.status_code}")
