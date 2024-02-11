@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools >= 61.0","requests"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "tunein-python"
+version = "0.0.1"
+authors = [
+  { name="MajliTech", email="tunein-python.pypi@majlitech.pl" },
+]
+description = "An unofficial, highly experimental wrapper around TuneIn. "
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+    "Topic :: Multimedia :: Sound/Audio",
+    "Topic :: Internet"
+]
+
+[project.urls]
+Homepage = "https://github.com/majlitech/tunein-python"
+Issues = "https://github.com/majlitech/tunein-python/issues"

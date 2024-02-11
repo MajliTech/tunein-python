@@ -1,7 +1,23 @@
+Metadata-Version: 2.1
+Name: tunein-python
+Version: 0.0.1
+Summary: An unofficial, highly experimental wrapper around TuneIn. 
+Author-email: MajliTech <tunein-python.pypi@majlitech.pl>
+Project-URL: Homepage, https://github.com/majlitech/tunein-python
+Project-URL: Issues, https://github.com/majlitech/tunein-python/issues
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Multimedia :: Sound/Audio
+Classifier: Topic :: Internet
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
 # tunein-python
 An unofficial, highly experimental wrapper around TuneIn.
 # pip?
-`pip install tunein-python`
+Later. 
 # How to use
 Simple! Import `tunein` and you have 3 functions for interfacing with TuneIn:
 1. `get_popular_stations()` - gets the popular stations in your area
