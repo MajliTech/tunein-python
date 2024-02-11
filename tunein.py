@@ -64,7 +64,7 @@ def get_station_metadata(id:str = None) -> dict or None:
             if not req["Content-Type"]=="application/json": raise
             req = requests.get(i['url']).json()
             for e in req["Streams"]:
-                response["streams"].append({"stream_url":e["Url"],"reliability":int(e['Reliability']),"media_type":e["MediaType"].lower(),"bitrate":e["Bandwith"]})
+                response["streams"].append({"stream_url":e["Url"],"reliability":int(e['Reliability']),"media_type":e["MediaType"].lower(),"bitrate":e["Bandwidth"]})
 
         except:
             response["streams"].append({"stream_url":i["url"],"reliability":int(i['reliability']),"media_type":i["media_type"],"bitrate":i["bitrate"]})
