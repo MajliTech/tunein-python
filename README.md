@@ -1,3 +1,9 @@
+# Moved over to codeberg
+
+Check out the new place where the repo lives: https://codeberg.org/techus/tunein-python
+
+---
+
 # tunein-python
 An unofficial, highly experimental wrapper around TuneIn.
 # pip?
